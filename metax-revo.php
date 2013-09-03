@@ -1,7 +1,7 @@
 <?php
 /*
 	MetaX (Meta Tags Extended) for Revolution
-	Version: 2.0.1
+	Version: 2.0.2
 	Author: Salvatore Sodano - http://salscode.com
 	Other Contributors:
 		Mike Stop Continues - http://mikestopcontinues.com
@@ -38,6 +38,7 @@
 	1.6 - Add HTML5 compat.
 	2.0 - Large rewrite. Employs TPL chunks to allow maximum flexibility.
 	2.0.1 - Small error fix about getOne use.
+	2.0.2 - Fix undefined variable warnings.
 */
 /**********Variables***********/
 $configs = $modx->getConfig();
