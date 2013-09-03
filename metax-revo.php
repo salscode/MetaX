@@ -129,6 +129,11 @@ if ($pragma == 1)
 else {$output["metax.cache"] = "no-cache";}
 
 /**Canonical Link**/
+if (!defined($urlExtension))
+{
+	$urlExtension = '';
+}
+
 if ($id == $sitestart) {$output["metax.canonical"] = $siteurl.$urlExtension;}
 else
 {
