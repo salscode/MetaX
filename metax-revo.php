@@ -175,13 +175,14 @@ $output["metax.mobile"] = $mobile;
 $rss = explode(",", $rss);
 $count = count($rss);
 $i = 0;
+$output["metax.rss"] = "";
 while ($i < $count)
 {
 	$rss[$i] = trim($rss[$i]);
 	$tmpdoc = $modx->getObject('modResource',array('id' => $rss[$i]));
 	if ($tmpdoc != NULL)
 	{
-		$output["metax.rss"] .= $tabstxt."<link href=\"".$modx->makeUrl($rss[$i], '', '', 'full')."\" rel=\"alternate\" type=\"application/rss+xml\" title=\"".$tmpdoc->get('pagetitle')."\"".$tagend;
+		$output["metax.rss"] .= "<link href=\"".$modx->makeUrl($rss[$i], '', '', 'full')."\" rel=\"alternate\" type=\"application/rss+xml\" title=\"".$tmpdoc->get('pagetitle')."\"".$tagend;
 	}
 	$i++;
 	if($i < $count) {$output["metax.rss"] .= "\n";}
@@ -200,11 +201,11 @@ while ($i < $count)
 	$temp[0] = trim($temp[0]);
 	if (is_file($temp[0]))
 	{
-		if ($countt == 1) {$output["metax.css"] .= $tabstxt."<link rel=\"stylesheet\" href=\"".$temp[0]."\" type=\"text/css\"".$tagend;}
+		if ($countt == 1) {$output["metax.css"] .= "<link rel=\"stylesheet\" href=\"".$temp[0]."\" type=\"text/css\"".$tagend;}
 		else
 		{
 			$temp[1] = trim($temp[1]);
-			$output["metax.css"] .= $tabstxt."<!--[if ".$temp[1]."]><link rel=\"stylesheet\" href=\"".$temp[0]."\" type=\"text/css\"".$tagend."<![endif]-->";
+			$output["metax.css"] .= "<!--[if ".$temp[1]."]><link rel=\"stylesheet\" href=\"".$temp[0]."\" type=\"text/css\"".$tagend."<![endif]-->";
 		}
 	}
 	$i++;
