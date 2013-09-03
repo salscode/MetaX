@@ -1,0 +1,18 @@
+<!-- base (html5) -->
+	<base href="[[++site_url]]" />
+	<meta name="robots" content="[[+metax.robots]]" />
+	<link rel="canonical" href="[[+metax.canonical]]" />
+	<meta charset="[[++modx_charset]]" />
+<!-- meta -->
+	<meta name="keywords" content="[[$AllKeywords:notempty=`[[$AllKeywords:strip]], `]][[*keywords:strip]]" />
+	[[*description:notempty=`<meta name="description" content="[[*description:strip]]" />`]]
+	[[*longtitle:notempty=`<meta name="abstract" content="[[*longtitle:replace=`<br />== `:replace=`<br>== `:striptags]]" />`]]
+	<meta name="author" content="[[+metax.createdby]]" />
+	<meta name="generator" content="MODX CMS" />
+	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+<!-- icons/rss/css -->
+	[[+metax.favicon:notempty=`<link rel="shortcut icon" type="image/x-icon" href="[[+metax.favicon]]" />`]]
+	[[+metax.mobile:notempty=`<link rel="apple-touch-icon" href="[[+metax.mobile]]" />`]]
+	[[+metax.css]]
+	[[+metax.rss]]
+<!-- end MetaX output -->

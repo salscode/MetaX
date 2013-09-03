@@ -1,0 +1,37 @@
+<!-- base xhtml4 -->
+	<base href="[[++site_url]]" />
+	<meta name="robots" content="[[+metax.robots]]" />
+	<link rel="canonical" href="[[+metax.canonical]]" />
+	<meta http-equiv="content-language" content="[[++cultureKey:ifempty=`en`]]" />
+	<meta http-equiv="Content-Type" content="[[*contentType:lcase]]; charset=[[++modx_charset]]" />
+	<meta http-equiv="pragma" content="[[+metax.cache]]" />
+	<meta http-equiv="cache-control" content="[[+metax.cache]]" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<!-- meta -->
+	<meta name="keywords" content="[[$AllKeywords:notempty=`[[$AllKeywords:strip]], `]][[*keywords:strip]]" />
+	[[*description:notempty=`<meta name="description" content="[[*description:strip]]" />`]]
+	[[*longtitle:notempty=`<meta name="abstract" content="[[*longtitle:replace=`<br />== `:replace=`<br>== `:striptags]]" />`]]
+	<meta http-equiv="last-modified" content="[[*editedon:strtotime:date=`%a, %d %b %Y %H:%M:%S %Z`]]" />
+	<meta name="author" content="[[+metax.createdby]]" />
+	<meta name="copyright" content="Copyright (c) [[+metax.copyyears]] by [[++site_name]]" />
+	<meta name="generator" content="MODX CMS" />
+	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+<!-- Dublin Core -->
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<meta name="DC.contributor" content="[[++site_name]]" />
+	<meta name="DC.creator" content="[[+metax.editedby]]" />
+	<meta name="DC.date" content="[[*editedon:strtotime:date=`%Y-%m-%d`]]" />
+	<meta name="DC.format" content="[[*contentType:lcase]]" />
+	<meta name="DC.identifier" content="[[*pagetitle]] - [[*id]]" />
+	<meta name="DC.language" content="[[++cultureKey:ifempty=`en`]]" />
+	<meta name="DC.publisher" content="[[++site_name]]" />
+	<meta name="DC.rights" content="Copyright (c) [[+metax.copyyears]] by [[++site_name]]" />
+	<meta name="DC.rightsHolder" content="[[++site_name]]" />
+	<meta name="DC.title" content="[[*pagetitle]]" />
+<!-- icons/rss/css -->
+	[[+metax.favicon:notempty=`<link rel="shortcut icon" type="image/x-icon" href="[[+metax.favicon]]" />`]]
+	[[+metax.mobile:notempty=`<link rel="apple-touch-icon" href="[[+metax.mobile]]" />`]]
+[[+metax.css]]
+[[+metax.rss]]
+<!-- end MetaX output -->

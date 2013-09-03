@@ -1,0 +1,19 @@
+	Version History:
+	1.0 - Private beta.
+	1.1 - First Public release.
+	1.2 - Thank you "Mike Stop Continues" for cleaning up some of the code. He made all of the
+	variables below work as inline parameters (they can still be set below if you wish)
+	and added mobile icon support. Also I've added RSS tag support and support for
+	different HTML and xHTML syntaxes.
+	1.3 - Dublin Core support via &dublin parameter.
+	Also added &tabs parameter to control the number of tabs in front of each element.
+	Added the &ietool and &css parameters. As always, fully backward compatible.
+	1.3.1 - Fixes issues with getTvOutput function. Adds &spaces parameter which controls the
+	number of spaces in front of each tag.
+	1.4 - Canonical URL now supports Archivist URLs (Enabled in Revo only), thank you Jakob Class
+	for working on this feature. Fixed possible issue with a function declaration.
+	1.5 - Implemented StripTags function for all document fields (just in case you put some html in a
+	description field). Also removed all deprecated functions in preparation for Revo 2.1.
+	1.6 - Add HTML5 compat.
+	2.0 - Large rewrite. Employs TPL chunks to allow maximum flexibility.
+	2.0.1 - Small error fix about getOne use.
